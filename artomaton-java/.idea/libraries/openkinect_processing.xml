@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="openkinect_processing">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/openkinect_processing.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
