@@ -1,0 +1,53 @@
+{
+  "name": "polar",
+  "version": "1.0.0",
+  "description": "Polargraph",
+  "author": "LFran <lufra2606@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --exec babel-node -w server.js -w nuxt.config.js -w api/ server.js",
+    "build": "nuxt build && babel server.js --out-file server.prod.js",
+    "start": "cross-env NODE_ENV=production node server.prod.js",
+    "precommit": "npm run lint",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "test": "npm run mocha",
+    "mocha": "mocha test/ --recursive --timeout=30000 --require babel-polyfill --compilers js:babel-core/register"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
+  },
+  "dependencies": {
+    "async": "^2.1.5",
+    "axios": "^0.15.3",
+    "cross-env": "^3.1.4",
+    "eslint-loader": "^1.6.3",
+    "express": "^4.14.0",
+    "johnny-five": "^0.10.6",
+    "matter-js": "^0.12.0",
+    "mock-firmata": "^0.1.0",
+    "nuxt": "latest",
+    "p5": "^0.5.7",
+    "redux": "^3.6.0",
+    "socket.io": "^1.7.3",
+    "socket.io-client": "^1.7.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-eslint": "^7.1.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "chalk": "^1.1.3",
+    "eslint": "^3.13.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-html": "^1.7.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "expect": "^1.20.2",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}

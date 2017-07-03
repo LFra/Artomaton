@@ -1,0 +1,11 @@
+export default {
+  ORIGIN_LEFT: 356,
+  ORIGIN_RIGHT: 1214,
+  DISTANCE_MOTORS: 1348,
+  STEPS_PER_MM: 2000 / (615 - 460),
+  RPM_MAX: 200,
+  MAX_X: 1000,
+  MAX_Y: 1000,
+  OFFSET_X: 0,
+  OFFSET_Y: 0
+}
