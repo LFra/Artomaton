@@ -128,7 +128,8 @@ board.on('ready', function () {
             log(chalk.gray.bgCyan.bold(` STEP QUEUE EMPTY `))
             log(chalk.gray.bgBlue.bold(``))
             s.broadcast.emit('getNewLineDataFromProcessing')
-            resolve()
+            driver.draw(0, 0)
+            pen('up').then(resolve())
           }
         }
       )
